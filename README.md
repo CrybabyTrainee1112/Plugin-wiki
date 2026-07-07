@@ -15,6 +15,7 @@ This Spigot plugin adds a variety of amazing superpowers through the Spigot API,
 - [Commands](#-commands)
 - [Available Powers](#-available-powers)
 - [Combo Skills](./combo.md)
+- [Team](./team.md)
 - [Tips & Tricks](#-tips--tricks)
 - [Contributing](#-contributing)
 - [License](#-license)
