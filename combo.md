@@ -145,3 +145,6 @@ Example 2: Boss fight sustain (Demon Lord + Vampire)
 ---
 
 For full descriptions of each power, see README.md: [Available Powers](README.md#-available-powers)
+
+## 📋 Table of Contents
+- [Skills](./skill.md)
