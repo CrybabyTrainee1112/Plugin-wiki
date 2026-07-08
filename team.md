@@ -59,9 +59,6 @@ Every feature listed above was **already designed and coded** — but due to a s
 - `isCoowner` → always returned `true` → a **permission-bypass bug**, treating every player as a co-owner.
 - `DbManager.java` also had a syntax error (leftover/orphaned code) that **prevented the plugin from compiling**.
 
-### Fixed
-- Removed 2 orphaned code blocks that broke compilation.
-- Replaced every broken `rs.isClosed()` check with `rs.next()` in: `getPlayerTeam`, `getPowerTeam`, `isCoowner`, `createInvite`, `requestAddToTeam`, `addPlayerToTeam`, `createPowerTeam`, `transferOwner`, `approveRequest`, `denyRequest`, `isPlayerInDb`.
 - Aligned permissions: `deny` and `requests` now allow co-owners, matching `approve`.
 - Added `invite/accept/decline/requests/approve/deny` to the help text and tab-completion.
 
