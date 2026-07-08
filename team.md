@@ -49,17 +49,3 @@
 On player join (`PlayerJoinEvent`): if the player owns a team with pending requests, they're automatically notified.
 
 ---
-
-## 🆕 What changed recently (bug fixes, not new features)
-
-Every feature listed above was **already designed and coded** — but due to a systemic bug (`ResultSet.isClosed()` misused instead of `ResultSet.next()`), most of it **did not actually work**:
-
-- `getPlayerTeam` and `getPowerTeam` → always returned "not found," so almost every self-service command (add/remove/list/invite/requests without an explicit team name) failed even when the underlying data was correct.
-- `createInvite` and `requestAddToTeam` → always reported failure → the invite and join-request features **never worked at all**.
-- `isCoowner` → always returned `true` → a **permission-bypass bug**, treating every player as a co-owner.
-- `DbManager.java` also had a syntax error (leftover/orphaned code) that **prevented the plugin from compiling**.
-
-- Aligned permissions: `deny` and `requests` now allow co-owners, matching `approve`.
-- Added `invite/accept/decline/requests/approve/deny` to the help text and tab-completion.
-
-→ With these fixes, this is the first time the entire feature set above actually works as originally designed.
